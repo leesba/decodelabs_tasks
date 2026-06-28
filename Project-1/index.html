@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DecodeLabs – Build the future with full-stack skills."
+    />
+    <title>DecodeLabs | Build the Future</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header" role="banner">
+      <nav class="nav-container" aria-label="Primary navigation">
+        <a href="#hero" class="nav-logo" aria-label="DecodeLabs home">
+          <span class="logo-mark">DL</span>
+          <span class="logo-text">DecodeLabs</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li>
+            <a href="#contact" class="nav-link nav-cta">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+      <!-- HERO SECTION -->
+      <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Full Stack Development · Batch 2026</p>
+          <h1 id="hero-heading" class="hero-heading">
+            Build the <span class="text-accent">Future</span><br />
+            of Digital Craft
+          </h1>
+          <p class="hero-body">
+            A strategic execution framework for full-stack interns. Master
+            responsive architecture, semantic HTML, and modern CSS — no
+            frameworks, just fundamentals.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore Projects</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card hero-card--main">
+            <div class="card-chip">Project 1</div>
+            <p class="card-title">Responsive Layout</p>
+            <div class="card-bar"></div>
+            <div class="card-bar card-bar--short"></div>
+          </div>
+          <div class="hero-card hero-card--secondary">
+            <div class="card-chip">Live</div>
+            <p class="card-title">Frontend Interface</p>
+            <div class="card-bar"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES / SKILLS SECTION -->
+      <section
+        id="services"
+        class="services-section"
+        aria-labelledby="services-heading"
+      >
+        <div class="section-container">
+          <header class="section-header">
+            <p class="section-eyebrow">The Toolkit</p>
+            <h2 id="services-heading" class="section-heading">
+              Your Raw Materials
+            </h2>
+            <p class="section-subheading">
+              No frameworks. Master the fundamentals first.
+            </p>
+          </header>
+
+          <div class="services-grid">
+            <article class="service-card" aria-labelledby="service-html">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 id="service-html" class="service-title">HTML5</h3>
+              <p class="service-subtitle">The Infrastructure</p>
+              <p class="service-desc">
+                Semantic landmarks and structural meaning. Not just divs, but
+                the right element for the right job.
+              </p>
+              <ul class="service-list" aria-label="HTML5 skills">
+                <li>Semantic Landmarks</li>
+                <li>Accessibility (WCAG)</li>
+                <li>SEO Best Practices</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card--featured" aria-labelledby="service-css">
+              <div class="service-badge">Core Skill</div>
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+              </div>
+              <h3 id="service-css" class="service-title">CSS3</h3>
+              <p class="service-subtitle">The Skin</p>
+              <p class="service-desc">
+                Responsive styling using Grid, Flexbox, and Container Queries.
+                Fluid typography with clamp().
+              </p>
+              <ul class="service-list" aria-label="CSS3 skills">
+                <li>CSS Grid & Flexbox</li>
+                <li>Mobile-First Design</li>
+                <li>Custom Properties</li>
+              </ul>
+            </article>
+
+            <article class="service-card" aria-labelledby="service-js">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+                </svg>
+              </div>
+              <h3 id="service-js" class="service-title">JavaScript</h3>
+              <p class="service-subtitle">The Logic</p>
+              <p class="service-desc">
+                Basic state management and interactive functionality. Vanilla JS
+                for real understanding.
+              </p>
+              <ul class="service-list" aria-label="JavaScript skills">
+                <li>DOM Manipulation</li>
+                <li>State Management</li>
+                <li>Event Handling</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT + SIDEBAR SECTION -->
+      <section id="about" class="about-section" aria-labelledby="about-heading">
+        <div class="section-container">
+          <div class="about-layout">
+
+            <!-- SIDEBAR -->
+            <aside class="about-sidebar" aria-label="Vision sidebar">
+              <div class="sidebar-sticky">
+                <div class="sidebar-block">
+                  <h3 class="sidebar-title">Color Palette</h3>
+                  <div class="palette">
+                    <div class="swatch" style="background:#A5856F;" title="Mocha Mousse">
+                      <span class="swatch-label">Mocha Mousse</span>
+                      <span class="swatch-hex">#A5856F</span>
+                    </div>
+                    <div class="swatch" style="background:#A0D4E0;" title="Ethereal Blue">
+                      <span class="swatch-label">Ethereal Blue</span>
+                      <span class="swatch-hex">#A0D4E0</span>
+                    </div>
+                    <div class="swatch swatch--dark" style="background:#F2F0EA;" title="Moonlit Grey">
+                      <span class="swatch-label">Moonlit Grey</span>
+                      <span class="swatch-hex">#F2F0EA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sidebar-block">
+                  <h3 class="sidebar-title">Standards</h3>
+                  <ul class="standards-list" role="list">
+                    <li>
+                      <strong>Semantic Integrity</strong>
+                      <span>Code for AI and Accessibility</span>
+                    </li>
+                    <li>
+                      <strong>2025 UI/UX</strong>
+                      <span>Warm, grounded aesthetics</span>
+                    </li>
+                    <li>
+                      <strong>Universal Access</strong>
+                      <span>Strict WCAG adherence</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+
+            <!-- MAIN ABOUT CONTENT -->
+            <div class="about-main">
+              <p class="section-eyebrow">The Vision</p>
+              <h2 id="about-heading" class="section-heading">
+                Architecting for the Mobile Web
+              </h2>
+              <p class="about-lead">
+                Construct a digital experience that honors the
+                <strong>Mobile-First</strong> paradigm. The web is a dynamic,
+                inclusive information system — and your code determines who has
+                access to it.
+              </p>
+
+              <div class="pillars-grid">
+                <div class="pillar-card">
+                  <span class="pillar-number" aria-hidden="true">01</span>
+                  <h3 class="pillar-title">Strategy & Blueprint</h3>
+                  <p>Empathy maps to uncover user pain points. If it doesn't work in grayscale, color won't fix it.</p>
+                </div>
+                <div class="pillar-card">
+                  <span class="pillar-number" aria-hidden="true">02</span>
+                  <h3 class="pillar-title">Visual Design</h3>
+                  <p>2025 aesthetic palette. Shift from sterile tech to warmth &amp; grounding. Max 2 font families.</p>
+                </div>
+                <div class="pillar-card">
+                  <span class="pillar-number" aria-hidden="true">03</span>
+                  <h3 class="pillar-title">Implementation</h3>
+                  <p>Semantic HTML5 as the bedrock of accessibility and SEO. CSS Grid for macro, Flexbox for micro.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS / CONTENT GRID SECTION -->
+      <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+        <div class="section-container">
+          <header class="section-header">
+            <p class="section-eyebrow">Execution Roadmap</p>
+            <h2 id="projects-heading" class="section-heading">
+              The 6 Phases
+            </h2>
+          </header>
+
+          <div class="roadmap-grid">
+            <article class="roadmap-card" aria-labelledby="phase-1">
+              <span class="phase-badge">Phase 1</span>
+              <h3 id="phase-1" class="roadmap-title">Discovery</h3>
+              <p class="roadmap-desc">Define "How Might We". Use Empathy Maps to uncover user pain points.</p>
+            </article>
+            <article class="roadmap-card" aria-labelledby="phase-2">
+              <span class="phase-badge">Phase 2</span>
+              <h3 id="phase-2" class="roadmap-title">Wireframe</h3>
+              <p class="roadmap-desc">Grayscale, mobile-first. Low-fidelity focus on hierarchy and flow.</p>
+            </article>
+            <article class="roadmap-card" aria-labelledby="phase-3">
+              <span class="phase-badge">Phase 3</span>
+              <h3 id="phase-3" class="roadmap-title">Semantics</h3>
+              <p class="roadmap-desc">HTML Landmarks — proper semantics provide a Table of Contents for screen readers.</p>
+            </article>
+            <article class="roadmap-card roadmap-card--accent" aria-labelledby="phase-4">
+              <span class="phase-badge">Phase 4</span>
+              <h3 id="phase-4" class="roadmap-title">Style</h3>
+              <p class="roadmap-desc">CSS Grid/Flex &amp; 2025 Palette. Fluid typography with clamp().</p>
+            </article>
+            <article class="roadmap-card" aria-labelledby="phase-5">
+              <span class="phase-badge">Phase 5</span>
+              <h3 id="phase-5" class="roadmap-title">Logic</h3>
+              <p class="roadmap-desc">State &amp; Interactivity. Vanilla JS for real DOM understanding.</p>
+            </article>
+            <article class="roadmap-card" aria-labelledby="phase-6">
+              <span class="phase-badge">Phase 6</span>
+              <h3 id="phase-6" class="roadmap-title">Audit</h3>
+              <p class="roadmap-desc">LCP/CLS &amp; Accessibility checks. Verify WCAG compliance and performance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / CTA SECTION -->
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <div class="section-container">
+          <div class="contact-card">
+            <h2 id="contact-heading" class="contact-heading">
+              You Are The Architect.
+            </h2>
+            <p class="contact-body">
+              Your code determines who has access to information and how the
+              world experiences it. Open your IDE, initialize the repository,
+              and begin with the blueprint.
+            </p>
+            <form class="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell us about your project idea..."
+                  rows="4"
+                  required
+                  aria-required="true"
+                ></textarea>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+              </button>
+              <p class="form-success" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="DecodeLabs home">
+            <span class="logo-mark">DL</span>
+            <span class="logo-text">DecodeLabs</span>
+          </a>
+          <p class="footer-tagline">
+            Batch 2026 · Full Stack Development · Greater Lucknow, India
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul role="list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <p>
+            <a href="mailto:decodelabs.tech@gmail.com">decodelabs.tech@gmail.com</a>
+          </p>
+          <p>
+            <a href="tel:+918933006408">+91 89330 06408</a>
+          </p>
+        </address>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> DecodeLabs. Built with HTML, CSS &amp; JavaScript.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
