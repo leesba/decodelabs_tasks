@@ -5,9 +5,47 @@
 
 ---
 
+## Screenshots
+
+### Hero — The Nervous System
+![Hero Section](screenshots/Screenshot%202026-06-28%20162009.png)
+
+### Paradigm Shift — Frontend vs Backend
+![Paradigm Shift](screenshots/Screenshot%202026-06-28%20162053.png)
+
+### IPO Model
+![IPO Model](screenshots/Screenshot%202026-06-28%20162114.png)
+
+### HTTP Methods — GET · POST · PUT · DELETE
+![HTTP Methods](screenshots/Screenshot%202026-06-28%20162140.png)
+
+### RESTful Naming Conventions
+![RESTful Naming](screenshots/Screenshot%202026-06-28%20162159.png)
+
+### JSON — The Neurotransmitter
+![JSON Section](screenshots/Screenshot%202026-06-28%20162216.png)
+
+### HTTP Status Codes
+![Status Codes](screenshots/Screenshot%202026-06-28%20162237.png)
+
+### Live API Terminal Demo
+![API Demo](screenshots/Screenshot%202026-06-28%20162256.png)
+
+### Gatekeeper Rule — Validation
+![Gatekeeper](screenshots/Screenshot%202026-06-28%20162319.png)
+
+### Contact & Footer
+![Contact](screenshots/Screenshot%202026-06-28%20162338.png)
+
+![Footer](screenshots/Screenshot%202026-06-28%20162353.png)
+
+---
+
 ## Overview
 
 Project 2 moves beyond the visual interface into the **application's brain** — understanding how data flows between client and server through robust API endpoints, validated inputs, and semantic HTTP communication.
+
+Built with pure **HTML5, CSS3, and Vanilla JavaScript**. No frameworks. Just fundamentals.
 
 ---
 
@@ -54,10 +92,11 @@ Fonts   — Montserrat + Roboto + Roboto Mono (Google Fonts)
 
 ```
 Project-2/
-├── index.html    ← Semantic HTML structure
-├── style.css     ← Blueprint/Navy theme, responsive layout
-├── script.js     ← Live API demo, form validation
-└── README.md     ← Project documentation
+├── index.html         ← Semantic HTML structure
+├── style.css          ← Blueprint/Navy theme, responsive layout
+├── script.js          ← Live API demo, form validation
+├── screenshots/       ← Project screenshots
+└── README.md          ← Project documentation
 ```
 
 ---
