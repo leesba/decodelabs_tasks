@@ -4,6 +4,28 @@
 
 ---
 
+## Screenshots
+
+### Hero Section
+![Hero Section](screenshots/Screenshot%202026-06-28%20164354.png)
+
+### Services — HTML5 · CSS3 · JavaScript
+![Services Section](screenshots/Screenshot%202026-06-28%20164416.png)
+
+### About — Design Vision & Color Palette
+![About Section](screenshots/Screenshot%202026-06-28%20164427.png)
+
+### Projects — 6 Phase Execution Roadmap
+![Projects Section](screenshots/Screenshot%202026-06-28%20164435.png)
+
+### Contact Form
+![Contact Section](screenshots/Screenshot%202026-06-28%20164448.png)
+
+### Footer
+![Footer](screenshots/Screenshot%202026-06-28%20164502.png)
+
+---
+
 ## Overview
 
 Project 1 is the **skin** of full-stack development — building a complete, responsive frontend interface using only semantic HTML5, modern CSS3, and Vanilla JavaScript. No frameworks, just fundamentals.
@@ -48,10 +70,11 @@ Fonts      — Montserrat + Roboto (Google Fonts)
 
 ```
 Project-1/
-├── index.html    ← Semantic HTML structure
-├── style.css     ← Mocha Mousse theme, responsive layout
-├── script.js     ← Nav toggle, form validation, dynamic year
-└── README.md     ← Project documentation
+├── index.html         ← Semantic HTML structure
+├── style.css          ← Mocha Mousse theme, responsive layout
+├── script.js          ← Nav toggle, form validation, dynamic year
+├── screenshots/       ← Project screenshots
+└── README.md          ← Project documentation
 ```
 
 ---
