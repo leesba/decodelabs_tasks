@@ -5,6 +5,40 @@
 
 ---
 
+## Screenshots
+
+### Hero — The Memory Vault
+![Hero Section](screenshots/Screenshot%202026-06-28%20173557.png)
+
+### Schema Blueprint
+![Schema](screenshots/Screenshot%202026-06-28%20173609.png)
+
+### Schema SQL Block
+![Schema SQL](screenshots/Screenshot%202026-06-28%20173624.png)
+
+### CRUD Manager — Stats & Table
+![CRUD Manager](screenshots/Screenshot%202026-06-28%20173633.png)
+
+### CRUD Manager — Data Table
+![Data Table](screenshots/Screenshot%202026-06-28%20173641.png)
+
+### CRUD Mapping
+![CRUD Map](screenshots/Screenshot%202026-06-28%20173648.png)
+
+### SQL vs NoSQL
+![SQL vs NoSQL](screenshots/Screenshot%202026-06-28%20173657.png)
+
+### Table Relationships
+![Relationships](screenshots/Screenshot%202026-06-28%20173708.png)
+
+### SQL Injection & Defense
+![Security](screenshots/Screenshot%202026-06-28%20173724.png)
+
+### Contact & Footer
+![Footer](screenshots/Screenshot%202026-06-28%20173734.png)
+
+---
+
 ## Overview
 
 Project 3 moves from the browser into the database layer — designing a real schema, performing full CRUD operations through a PHP backend, and protecting data with parameterized queries.
