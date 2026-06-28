@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecodeLabs — Project 3: The Memory Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-dl">DL</span>
+        <span class="brand-text">DecodeLabs</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" role="list">
+        <li><a href="#schema"   class="nav-link">Schema</a></li>
+        <li><a href="#crud"     class="nav-link">CRUD Manager</a></li>
+        <li><a href="#concepts" class="nav-link">Concepts</a></li>
+        <li><a href="#security" class="nav-link">Security</a></li>
+        <li><a href="#contact"  class="nav-link nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-grid"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="hero-badge">Project 3 · Database Integration</div>
+          <h1 class="hero-title">
+            The<br>
+            <span class="hero-accent">Memory</span><br>
+            Vault
+          </h1>
+          <p class="hero-sub">
+            Project 1 was the face.<br>
+            Project 2 was the brain.<br>
+            Project 3 is the <strong>memory</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="#crud"   class="btn-primary">Open CRUD Manager</a>
+            <a href="#schema" class="btn-outline">View Schema</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="t-dot t-red"></span>
+              <span class="t-dot t-yellow"></span>
+              <span class="t-dot t-green"></span>
+              <span class="terminal-title">mysql&gt; decodelabs_db</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-dim">mysql&gt; </span><span class="t-cmd">USE decodelabs_db;</span></p>
+              <p class="t-ok">Database changed</p>
+              <p><span class="t-dim">mysql&gt; </span><span class="t-cmd">SELECT * FROM interns;</span></p>
+              <p class="t-dim t-sep">+----+---------------+------------------------+--------+</p>
+              <p><span class="t-col">| id </span><span class="t-dim">|</span><span class="t-col"> name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-col"> domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-col"> status </span><span class="t-dim">|</span></p>
+              <p class="t-dim t-sep">+----+---------------+------------------------+--------+</p>
+              <p><span class="t-dim">|</span><span class="t-num">&nbsp;1&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-str">&nbsp;Aryan Sharma&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-str">&nbsp;Full Stack Development&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-ok">&nbsp;active&nbsp;</span><span class="t-dim">|</span></p>
+              <p><span class="t-dim">|</span><span class="t-num">&nbsp;2&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-str">&nbsp;Priya Verma&nbsp;&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-str">&nbsp;Frontend Development&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="t-dim">|</span><span class="t-ok">&nbsp;active&nbsp;</span><span class="t-dim">|</span></p>
+              <p class="t-dim t-sep">+----+---------------+------------------------+--------+</p>
+              <p class="t-muted">2 rows in set (0.001 sec)</p>
+              <p class="t-cursor">█</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHEMA ===== -->
+    <section class="section-light" id="schema">
+      <div class="container">
+        <div class="section-label">Database Blueprint</div>
+        <h2 class="section-title">Schema Design</h2>
+        <p class="section-desc">The <code>interns</code> table — every row is a record, every column is a typed, constrained attribute.</p>
+
+        <div class="schema-grid">
+          <div class="schema-table-card">
+            <div class="st-header">
+              <div class="st-icon">⬡</div>
+              <div>
+                <div class="st-name">interns</div>
+                <div class="st-sub">MySQL Table · decodelabs_db</div>
+              </div>
+            </div>
+            <div class="st-rows">
+              <div class="st-row st-pk">
+                <span class="st-badge badge-pk">PK</span>
+                <span class="st-col">id</span>
+                <span class="st-type">INT</span>
+                <span class="st-constraint">AUTO_INCREMENT · NOT NULL</span>
+              </div>
+              <div class="st-row">
+                <span class="st-badge badge-col">col</span>
+                <span class="st-col">name</span>
+                <span class="st-type">VARCHAR(100)</span>
+                <span class="st-constraint">NOT NULL</span>
+              </div>
+              <div class="st-row st-uq">
+                <span class="st-badge badge-uq">UQ</span>
+                <span class="st-col">email</span>
+                <span class="st-type">VARCHAR(100)</span>
+                <span class="st-constraint">NOT NULL · UNIQUE</span>
+              </div>
+              <div class="st-row">
+                <span class="st-badge badge-col">col</span>
+                <span class="st-col">batch</span>
+                <span class="st-type">VARCHAR(10)</span>
+                <span class="st-constraint">DEFAULT '2026'</span>
+              </div>
+              <div class="st-row">
+                <span class="st-badge badge-col">col</span>
+                <span class="st-col">domain</span>
+                <span class="st-type">VARCHAR(100)</span>
+                <span class="st-constraint">NOT NULL</span>
+              </div>
+              <div class="st-row">
+                <span class="st-badge badge-col">col</span>
+                <span class="st-col">status</span>
+                <span class="st-type">ENUM</span>
+                <span class="st-constraint">'active' | 'inactive'</span>
+              </div>
+              <div class="st-row st-ts">
+                <span class="st-badge badge-ts">TS</span>
+                <span class="st-col">created_at</span>
+                <span class="st-type">TIMESTAMP</span>
+                <span class="st-constraint">DEFAULT CURRENT_TIMESTAMP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schema-concepts">
+            <div class="sc-card">
+              <div class="sc-icon">🔑</div>
+              <div>
+                <h4>Primary Key</h4>
+                <p>Uniquely identifies every row. <code>id</code> is auto-incremented — never null, never repeated.</p>
+              </div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-icon">✦</div>
+              <div>
+                <h4>UNIQUE Constraint</h4>
+                <p>No two interns can share the same <code>email</code> — enforced at the database level, not the app.</p>
+              </div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-icon">⚙</div>
+              <div>
+                <h4>ENUM Type</h4>
+                <p><code>status</code> only accepts 'active' or 'inactive'. Any other value is rejected by MySQL.</p>
+              </div>
+            </div>
+            <div class="sc-card">
+              <div class="sc-icon">🚫</div>
+              <div>
+                <h4>NOT NULL</h4>
+                <p>Mandatory fields. Even if your app forgets to send them — MySQL refuses the row.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sql-block">
+          <div class="sql-topbar">
+            <span class="sql-file">setup.sql</span>
+            <span class="sql-tag">DDL — Data Definition Language</span>
+          </div>
+          <pre class="sql-pre"><code><span class="sk">CREATE DATABASE IF NOT EXISTS</span> decodelabs_db
+  <span class="sk">CHARACTER SET</span> utf8mb4 <span class="sk">COLLATE</span> utf8mb4_unicode_ci;
+
+<span class="sk">USE</span> decodelabs_db;
+
+<span class="sk">CREATE TABLE IF NOT EXISTS</span> interns (
+  id         <span class="st">INT</span>          <span class="sc">AUTO_INCREMENT PRIMARY KEY</span>,
+  name       <span class="st">VARCHAR</span>(100) <span class="sc">NOT NULL</span>,
+  email      <span class="st">VARCHAR</span>(100) <span class="sc">NOT NULL UNIQUE</span>,
+  batch      <span class="st">VARCHAR</span>(10)  <span class="sc">NOT NULL DEFAULT</span> <span class="ss">'2026'</span>,
+  domain     <span class="st">VARCHAR</span>(100) <span class="sc">NOT NULL</span>,
+  status     <span class="st">ENUM</span>(<span class="ss">'active'</span>, <span class="ss">'inactive'</span>) <span class="sc">DEFAULT</span> <span class="ss">'active'</span>,
+  created_at <span class="st">TIMESTAMP</span>    <span class="sc">DEFAULT CURRENT_TIMESTAMP</span>
+);</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CRUD MANAGER ===== -->
+    <section class="section-white" id="crud">
+      <div class="container">
+        <div class="section-label">Live Database Operations</div>
+        <h2 class="section-title">CRUD Manager</h2>
+        <p class="section-desc">Real PHP + MySQL backend. Every action hits the database — no mocks, no simulations.</p>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-num" id="stat-total">—</div>
+            <div class="stat-lbl">Total Interns</div>
+          </div>
+          <div class="stat-card stat-active">
+            <div class="stat-num" id="stat-active">—</div>
+            <div class="stat-lbl">Active</div>
+          </div>
+          <div class="stat-card stat-inactive">
+            <div class="stat-num" id="stat-inactive">—</div>
+            <div class="stat-lbl">Inactive</div>
+          </div>
+        </div>
+
+        <div class="table-toolbar">
+          <div class="toolbar-left">
+            <span class="live-dot"></span>
+            <span class="toolbar-title">Intern Records</span>
+          </div>
+          <button class="btn-add" onclick="openAddModal()">+ Add Intern</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Domain</th>
+                <th>Batch</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr><td colspan="7" class="tbl-loading">Loading records...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="crud-map">
+          <div class="cm-card cm-create">
+            <div class="cm-op">CREATE</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-http">POST</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-sql">INSERT</div>
+          </div>
+          <div class="cm-card cm-read">
+            <div class="cm-op">READ</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-http">GET</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-sql">SELECT</div>
+          </div>
+          <div class="cm-card cm-update">
+            <div class="cm-op">UPDATE</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-http">PUT</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-sql">UPDATE</div>
+          </div>
+          <div class="cm-card cm-delete">
+            <div class="cm-op">DELETE</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-http">DELETE</div>
+            <div class="cm-arr">→</div>
+            <div class="cm-sql">DELETE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONCEPTS ===== -->
+    <section class="section-light" id="concepts">
+      <div class="container">
+        <div class="section-label">Core Database Theory</div>
+        <h2 class="section-title">Key Concepts</h2>
+
+        <div class="compare-block">
+          <h3 class="block-title">SQL vs NoSQL</h3>
+          <div class="compare-grid">
+            <div class="cmp-card sql-side">
+              <div class="cmp-header">SQL</div>
+              <ul class="cmp-list">
+                <li>Structured tables with fixed schema</li>
+                <li>Rows &amp; columns — like a spreadsheet</li>
+                <li>ACID transactions — data is always consistent</li>
+                <li>Strong relationships via Foreign Keys</li>
+                <li>MySQL · PostgreSQL · SQLite</li>
+              </ul>
+              <div class="cmp-when">Use when: Data is relational and structure matters</div>
+            </div>
+            <div class="cmp-vs">VS</div>
+            <div class="cmp-card nosql-side">
+              <div class="cmp-header">NoSQL</div>
+              <ul class="cmp-list">
+                <li>Flexible / schema-less documents</li>
+                <li>JSON-like objects, key-value, graphs</li>
+                <li>Horizontal scalability — millions of records</li>
+                <li>Eventual consistency</li>
+                <li>MongoDB · Redis · Cassandra</li>
+              </ul>
+              <div class="cmp-when">Use when: Data is unstructured or scale is massive</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rel-block">
+          <h3 class="block-title">Table Relationships</h3>
+          <div class="rel-grid">
+            <div class="rel-card">
+              <div class="rel-type">1 : 1</div>
+              <div class="rel-name">One-to-One</div>
+              <p>One intern has exactly one profile card. One profile belongs to exactly one intern.</p>
+              <code class="rel-code">intern.id → profile.intern_id</code>
+            </div>
+            <div class="rel-card">
+              <div class="rel-type">1 : ∞</div>
+              <div class="rel-name">One-to-Many</div>
+              <p>One batch has many interns. Each intern belongs to exactly one batch.</p>
+              <code class="rel-code">batch.id → intern.batch_id</code>
+            </div>
+            <div class="rel-card">
+              <div class="rel-type">∞ : ∞</div>
+              <div class="rel-name">Many-to-Many</div>
+              <p>Interns take many courses. Courses have many interns. Needs a junction table.</p>
+              <code class="rel-code">intern_courses(intern_id, course_id)</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECURITY ===== -->
+    <section class="section-dark" id="security">
+      <div class="container">
+        <div class="section-label section-label-light">Data Protection</div>
+        <h2 class="section-title section-title-light">SQL Injection &amp; Defense</h2>
+        <p class="section-desc section-desc-light">The most common database attack — and how parameterized queries stop it cold.</p>
+
+        <div class="vuln-grid">
+          <div class="vuln-card vuln-danger">
+            <div class="vuln-head">
+              <span class="v-badge v-bad">VULNERABLE</span>
+              String Concatenation
+            </div>
+            <pre class="code-pre"><code><span class="pv">$email</span> = <span class="ps">"' OR 1=1 --"</span>;
+
+<span class="pc">// DANGER: User input injected directly into SQL</span>
+<span class="pv">$query</span> = <span class="ps">"SELECT * FROM interns
+  WHERE email = '"</span> . <span class="pv">$email</span> . <span class="ps">"'"</span>;
+
+<span class="pc">// Actual SQL that runs:</span>
+<span class="pdanger">SELECT * FROM interns WHERE email = ''
+OR 1=1 --'
+-- Returns ALL rows! Data is exposed.</span></code></pre>
+          </div>
+
+          <div class="vuln-card vuln-safe">
+            <div class="vuln-head">
+              <span class="v-badge v-ok">PROTECTED</span>
+              Parameterized Query
+            </div>
+            <pre class="code-pre"><code><span class="pv">$email</span> = <span class="ps">"' OR 1=1 --"</span>;
+
+<span class="pc">// SAFE: ? is a placeholder, not injected SQL</span>
+<span class="pv">$stmt</span> = <span class="pv">$pdo</span>-><span class="pf">prepare</span>(
+  <span class="ps">"SELECT * FROM interns WHERE email = ?"</span>
+);
+<span class="pv">$stmt</span>-><span class="pf">execute</span>([<span class="pv">$email</span>]);
+
+<span class="psafe">// Input is treated as DATA, never as SQL code
+// No rows returned — attack neutralized ✓</span></code></pre>
+          </div>
+        </div>
+
+        <div class="rule-box">
+          <div class="rule-icon">⚡</div>
+          <div class="rule-text">
+            <strong>The Parameterized Rule:</strong> Never concatenate user input into SQL strings.
+            Always use <code>prepare()</code> + <code>execute([])</code>.
+            The database engine treats <code>?</code> as a data slot — not executable SQL.
+            Attack neutralized at the engine level.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section-light" id="contact">
+      <div class="container">
+        <div class="section-label">DecodeLabs</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-desc">Batch 2026 · Full Stack Development · Greater Lucknow</p>
+            <div class="contact-item">📧 decodelabs.tech@gmail.com</div>
+            <div class="contact-item">📞 +91 89330 06408</div>
+            <div class="project-stack">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">XAMPP</span>
+              <span class="stack-tag">PDO</span>
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">JavaScript</span>
+            </div>
+          </div>
+          <form class="contact-form" novalidate>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Your name" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+            <span class="form-success"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-dl">DL</span>
+          <span>DecodeLabs</span>
+        </div>
+        <div class="footer-nav">
+          <a href="#schema">Schema</a>
+          <a href="#crud">CRUD</a>
+          <a href="#concepts">Concepts</a>
+          <a href="#security">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> DecodeLabs · Batch 2026 · Project 3 — The Memory Vault</span>
+        <span>PHP · MySQL · XAMPP</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== ADD / EDIT MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Intern</h3>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      </div>
+      <form id="intern-form" novalidate>
+        <input type="hidden" id="form-id">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" id="form-name" placeholder="Aryan Sharma" required>
+            <span class="form-error" id="err-name"></span>
+          </div>
+          <div class="form-group">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" id="form-email" placeholder="aryan@email.com" required>
+            <span class="form-error" id="err-email"></span>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>Domain <span class="req">*</span></label>
+            <input type="text" id="form-domain" placeholder="Full Stack Development" required>
+            <span class="form-error" id="err-domain"></span>
+          </div>
+          <div class="form-group">
+            <label>Batch</label>
+            <select id="form-batch">
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2027">2027</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <div class="radio-grp">
+            <label class="radio-lbl"><input type="radio" name="status" value="active" checked> Active</label>
+            <label class="radio-lbl"><input type="radio" name="status" value="inactive"> Inactive</label>
+          </div>
+        </div>
+        <div class="form-api-msg" id="form-api-msg"></div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn-primary" id="submit-btn">Add Intern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== DELETE CONFIRM MODAL ===== -->
+  <div class="modal-overlay" id="delete-overlay">
+    <div class="modal-box modal-sm" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3>Confirm Delete</h3>
+        <button class="modal-close" onclick="closeDeleteModal()" aria-label="Close">✕</button>
+      </div>
+      <p class="delete-msg">Are you sure you want to delete <strong id="delete-name-display"></strong>?<br>This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeDeleteModal()">Cancel</button>
+        <button class="btn-delete" onclick="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

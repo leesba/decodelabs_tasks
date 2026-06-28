@@ -10,6 +10,7 @@
 |---|---|---|---|
 | 1 | [Project-1](./Project-1/) | Responsive Frontend Layout | ✅ Complete |
 | 2 | [Project-2](./Project-2/) | Backend API Development — The Nervous System | ✅ Complete |
+| 3 | [Project-3](./Project-3/) | Database Integration — The Memory Vault | ✅ Complete |
 
 ---
 
@@ -33,12 +34,24 @@ Backend API concepts demonstrated through a live interactive frontend — HTTP M
 
 ---
 
+## Project 3 — The Memory Vault
+
+Real PHP + MySQL backend. Full CRUD operations — Create, Read, Update, Delete — with parameterized queries for SQL injection prevention.
+
+**Key Skills:** PHP · MySQL · PDO · CRUD · SQL Schema · Parameterized Queries · SQL Injection Defense
+
+→ [View Project 3](./Project-3/)
+
+---
+
 ## Tech Stack
 
 ```
 HTML5      — Semantic structure, ARIA, WCAG compliance
 CSS3       — Grid, Flexbox, Custom Properties, Mobile-First
 JavaScript — Vanilla JS, DOM, fetch() API, form validation
+PHP        — Backend API, PDO database connection
+MySQL      — Relational database, schema design, CRUD
 ```
 
 ---
